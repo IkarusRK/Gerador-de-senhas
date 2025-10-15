@@ -1,0 +1,197 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        max-width: 500px;
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        color: #2c5364;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+    }
+
+    .password-display {
+        background: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 2px solid #ddd;
+    }
+
+    #passwordOutput {
+        font-size: 1.5em;
+        font-family: monospace;
+        color: #333;
+        word-break: break-all;
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .copy-btn {
+        background: #2c5364;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1.2em;
+    }
+
+    .copy-btn:hover {
+        background: #203a43;
+        transform: scale(1.1);
+    }
+
+    .options {
+        margin-bottom: 30px;
+    }
+
+    .option-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .slider-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    input[type="range"] {
+        flex: 1;
+        height: 8px;
+        border-radius: 5px;
+        background: #ddd;
+        outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #2c5364;
+        cursor: pointer;
+    }
+
+    .length-value {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #2c5364;
+        min-width: 40px;
+        text-align: center;
+    }
+
+    .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .checkbox-item label {
+        margin: 0;
+        cursor: pointer;
+        font-weight: normal;
+    }
+
+    .generate-btn {
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .generate-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 7px 20px rgba(102, 126, 234, 0.6);
+    }
+
+    .strength-meter {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .strength-weak {
+        background: #ff6b6b;
+        color: white;
+    }
+
+    .strength-medium {
+        background: #ffd93d;
+        color: #333;
+    }
+
+    .strength-strong {
+        background: #6bcf7f;
+        color: white;
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #2c5364;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transform: translateX(400px);
+        transition: transform 0.3s ease;
+    }
+
+    .notification.show {
+        transform: translateX(0);
+    }
+

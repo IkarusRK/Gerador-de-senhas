@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔐 Gerador de Senhas</h1>
+
+        <div class="password-display">
+            <span id="passwordOutput">Gere uma senha segura</span>
+            <button class="copy-btn" onclick="copyPassword()" title="Copiar">📋</button>
+        </div>
+
+        <div class="options">
+            <div class="option-group">
+                <label>Comprimento da Senha</label>
+                <div class="slider-container">
+                    <input type="range" id="length" min="4" max="32" value="16" oninput="updateLength()">
+                    <span class="length-value" id="lengthValue">16</span>
+                </div>
+            </div>
+
+            <div class="option-group">
+                <label>Incluir:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="uppercase" checked>
+                        <label for="uppercase">Letras Maiúsculas (A-Z)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase">Letras Minúsculas (a-z)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="numbers" checked>
+                        <label for="numbers">Números (0-9)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="symbols" checked>
+                        <label for="symbols">Símbolos (!@#$%^&*)</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="generate-btn" onclick="generatePassword()">Gerar Senha</button>
+
+        <div id="strengthMeter" class="strength-meter" style="display: none;"></div>
+    </div>
+
+    <div class="notification" id="notification">Senha copiada!</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
